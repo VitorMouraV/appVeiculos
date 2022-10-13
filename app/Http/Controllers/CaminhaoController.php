@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Http\Request;
-use app\Models\Caminhao;
+use Illuminate\HTTP\Request;
+use App\Models\Caminhao;
 
 class CaminhaoController extends Controller
 {
@@ -18,11 +18,12 @@ class CaminhaoController extends Controller
     }
 
     public function SalvarBanco(Request $request){
-        $dadosCaminhao = $request->validade([
+        $dadosCaminhao = $request->validate([
             'modelo' => 'string|required',
             'marca' => 'string|required',
             'ano' => 'string|required',
-            'valor' => 'string|nullable'
+            'cor' => 'string|required',
+            'valor' => 'string|nullable',
         ]);
 
         Caminhao::create($dadosCaminhao);

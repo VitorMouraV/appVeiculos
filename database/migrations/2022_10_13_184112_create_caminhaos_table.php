@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('caminhaos', function (Blueprint $table) {
+        
+        Schema::create('caminhaos', function (Blueprint $table) 
+        {
             $table->id();
             $table->string('modelo');
             $table->string('marca');
             $table->string('ano');
             $table->string('cor');
-            $table->string('valor')-nullable();
+            $table->string('valor')->nullable();
             $table->timestamps();
         });
     }

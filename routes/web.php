@@ -22,4 +22,4 @@ Route::get('/', function () {
 Route::get('/',[HomeController::class,'MostrarHome'])->name('home');
 Route::get('/editar-caminhao',[CaminhaoController::class,'Editar'])-> name('editar-caminhao');
 Route::get('/cadastrar-caminhao',[CaminhaoController::class,'FormularioCadastro'])-> name('cadastrar-caminhao');
-route::post('/cadastrar-caminhao',[CaminhaoController::class,'SalvarBanco'])->name ('salva-banco');
+route::post('/cadastrar-caminhao',[CaminhaoController::class,'SalvarBanco'])->name ('salvar-banco');

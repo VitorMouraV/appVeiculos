@@ -2,7 +2,7 @@
 @section('content')
 <section>
 <div class="container cadastroCaminhao">
-<form class="row g-3" method="post" action="{{route('salva-banco')}}">
+<form class="row g-3" method="post" action="{{route('salvar-banco')}}">
   @csrf
   <div class="col-md-12">
     <label for="inputModelo" class="form-label">Modelo</label>
